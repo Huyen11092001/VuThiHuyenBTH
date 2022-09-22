@@ -1,0 +1,27 @@
+﻿<h2>Danh sách Person:</h2>
+<hr>
+<table class="table border">
+    <tr>
+        <th>
+            <label>Mã Person</label>
+        </th>
+        <th>
+            <label>Tên Person</label>
+        </th>
+        <th>
+            <label>Tuổi</label>
+        </th>
+        <th>
+            <label>Địa chỉ </label>
+        </th>
+    </tr>
+    @foreach (var item in ViewData["Persons"] as List<Person>)
+    {
+        <tr>
+            <td>@item.PersonID</td>
+            <td>@item.PersonName</td>
+            <td>@item.PersonAge</td>
+            <td>@item.Address</td>
+        </tr>
+    }
+</table>
